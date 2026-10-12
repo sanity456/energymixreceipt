@@ -1,21 +1,22 @@
 {
-  "abi_sha256": "330b1612eaac4c53488dde3900184b96bc6aa66313c491c3dcfa1b769eea6350",
-  "contract_address": "0x68777Fbd0Bd822D544bA3E10CA34A822A27b6338",
+  "abi_sha256": "99c5249a6a702324e956f8b85f4d9fc42afce3fba0bfe6b0f24390262e4add39",
+  "contract_address": "0xf405D47b70b839e3F369F9f7c196e98A219a22a8",
   "deployed_abi_matches_local": true,
-  "deployed_source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
-  "deployment_transaction_hash": "0x0dab1dfd944a243c240421c08d2aa1841496f3b8c144b6bac3ac8d16cfcb38ef",
+  "deployed_source_sha256": "b5ac7282e4eeb1d8292c12dd02a8e91b8d7acf7ac0a3166ac0e0c25ddfd7dbd6",
+  "deployment_transaction_hash": "0x757bf339bfeb8f7c0645c5a7152102a64a8367296d913ab482323ca606719bff",
   "full_flow_test": {
-    "completed_at_utc": "2026-10-12T11:58:15.864913+00:00",
-    "final_state": "CLASSIFIED",
-    "source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
+    "completed_at_utc": "2026-10-12T12:49:39.972848+00:00",
+    "final_state": "ISSUED_WITH_25_MWH_RETIRED",
+    "source_sha256": "b5ac7282e4eeb1d8292c12dd02a8e91b8d7acf7ac0a3166ac0e0c25ddfd7dbd6",
     "status": "passed",
     "test_file": "tests/studionet_smoke.py",
     "transaction_hashes": {
-      "classify_mix": "0xda3eca89d94fabddd98066b70c8fe1a32497006679079454c0ab4e21ca32e014",
-      "deploy": "0x0dab1dfd944a243c240421c08d2aa1841496f3b8c144b6bac3ac8d16cfcb38ef",
-      "record_mix": "0x115f7fc74ae266af3d74baae85d4c7eec0884d4187d23800b3996353d1094649"
+      "attest_mix": "0xcbab90e21df9a634134114691670259c3e32d7406d36053c7f69d022dd6419a9",
+      "deploy": "0x757bf339bfeb8f7c0645c5a7152102a64a8367296d913ab482323ca606719bff",
+      "record_mix": "0xe7716dc4182cb4f2e5dcd6ec2208080c1b3d523ef1ae3c49b918e24ff9650ca3",
+      "retire": "0x856a5ba4b3301241e29c18194aef484f5d423ad811046e8ea65cefdf39260d8c"
     },
-    "workflow_id": "0x11cdfa59021240f5b2f31e425650765390ac3796:release_ff6fac35"
+    "workflow_id": "0x7fcd006a39f0f3863054ee1a6cf6fe1e4dee16be:release_5855e88a"
   },
   "network": {
     "chain_id": 61999,
@@ -25,8 +26,10 @@
   "repository": "energymixreceipt",
   "schema": "genlayer-submission-evidence/v2",
   "source_bytes_match": true,
-  "source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
+  "source_sha256": "b5ac7282e4eeb1d8292c12dd02a8e91b8d7acf7ac0a3166ac0e0c25ddfd7dbd6",
   "wallet_addresses": {
-    "owner": "0x11CDfA59021240f5B2f31E425650765390Ac3796"
+    "auditor": "0x94875ba0b39171f07d4509Bcc91637787f6901Ee",
+    "beneficiary": "0x2E18F80b81A675209309DF243A141239227F5A28",
+    "owner": "0x7fCD006a39F0F3863054Ee1a6cF6fE1E4dEE16Be"
   }
 }

@@ -4,16 +4,20 @@
     "kwparams": {}
   },
   "methods": {
-    "classify_mix": {
+    "attest_mix": {
       "params": [
         [
           "mix_id",
+          "string"
+        ],
+        [
+          "auditor_report",
           "string"
         ]
       ],
       "kwparams": {},
       "readonly": false,
-      "ret": "int",
+      "ret": "string",
       "payable": false
     },
     "get_mix": {
@@ -58,11 +62,35 @@
               "$rep": "int"
             }
           ]
+        ],
+        [
+          "auditor",
+          "address"
+        ],
+        [
+          "beneficiary",
+          "address"
         ]
       ],
       "kwparams": {},
       "readonly": false,
       "ret": "string",
+      "payable": false
+    },
+    "retire": {
+      "params": [
+        [
+          "mix_id",
+          "string"
+        ],
+        [
+          "amount_mwh",
+          "int"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
       "payable": false
     }
   }

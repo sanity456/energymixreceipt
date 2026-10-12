@@ -1,8 +1,8 @@
 # Release audit
 
-- Mechanism: consensus normalizes an ordered vector of generation-source descriptions; deterministic code aggregates owner-declared MWh and computes renewable share. There is no threshold event, run selection, or observer quorum.
-- Source policy: all descriptions and quantities are public caller declarations. The contract never scrapes supplier sites or authenticates generation claims.
-- Security: owner-scoped keys, owner-only one-time classification, aligned vector and amount bounds, strict result parsing, and independent validator rerun. No funds are held.
-- Local gates: GenVM lint and strict type check passed; 3 direct tests passed, including owner authorization, vector mismatch, and malformed output.
-- StudioNet gate: full deploy/record/classify flow passed with its own fresh wallet; final state `CLASSIFIED` at 7,000 bps; read-only release proof passed. The manifest binds receipt hashes, source bytes, and ABI.
-- Limits: the result is an accounting view of declared amounts, not a renewable-energy certificate.
+- Mechanism (v2): frozen generation rows, a separate auditor's wallet-bound report, validator-agreed categories and row/report alignment, then deterministic renewable MWh accounting and beneficiary-only bounded retirement.
+- Source policy: rows and quantities are public supplier declarations and the audit is a separate public wallet-bound declaration. The contract never scrapes supplier sites or authenticates physical generation claims.
+- Security: owner-scoped keys, three distinct nonzero roles, one-time auditor attestation, beneficiary-only retirement bounded by the issued renewable amount, aligned vector and amount bounds, strict result parsing, and independent validator rerun. No funds are held.
+- Local gates: GenVM lint and strict type check passed; 3 v2 direct tests passed, including role authorization, vector mismatch, malformed output, and over-retirement.
+- StudioNet gate: fresh v2 deployment, record/auditor-attest/beneficiary-retire flow, and read-only release proof passed with three isolated wallets. The deployed source is byte-identical to `contracts/energy_mix_receipt.py`, the ABI matches, and all four receipts finalized. The v1 address must not be submitted as evidence for this source.
+- Limits: issuer/auditor agreement and bounded retirement do not produce a regulated renewable-energy certificate or independently prove metered generation. A real deployment needs an independent auditor-selection policy.
