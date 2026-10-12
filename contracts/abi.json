@@ -1,0 +1,69 @@
+{
+  "ctor": {
+    "params": [],
+    "kwparams": {}
+  },
+  "methods": {
+    "classify_mix": {
+      "params": [
+        [
+          "mix_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "int",
+      "payable": false
+    },
+    "get_mix": {
+      "params": [
+        [
+          "mix_id",
+          "string"
+        ]
+      ],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "string"
+    },
+    "get_mix_count": {
+      "params": [],
+      "kwparams": {},
+      "readonly": true,
+      "ret": "int"
+    },
+    "record_mix": {
+      "params": [
+        [
+          "mix_key",
+          "string"
+        ],
+        [
+          "period",
+          "string"
+        ],
+        [
+          "descriptions",
+          [
+            {
+              "$rep": "string"
+            }
+          ]
+        ],
+        [
+          "amounts_mwh",
+          [
+            {
+              "$rep": "int"
+            }
+          ]
+        ]
+      ],
+      "kwparams": {},
+      "readonly": false,
+      "ret": "string",
+      "payable": false
+    }
+  }
+}

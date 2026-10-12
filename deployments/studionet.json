@@ -1,0 +1,32 @@
+{
+  "abi_sha256": "330b1612eaac4c53488dde3900184b96bc6aa66313c491c3dcfa1b769eea6350",
+  "contract_address": "0x68777Fbd0Bd822D544bA3E10CA34A822A27b6338",
+  "deployed_abi_matches_local": true,
+  "deployed_source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
+  "deployment_transaction_hash": "0x0dab1dfd944a243c240421c08d2aa1841496f3b8c144b6bac3ac8d16cfcb38ef",
+  "full_flow_test": {
+    "completed_at_utc": "2026-10-12T11:58:15.864913+00:00",
+    "final_state": "CLASSIFIED",
+    "source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
+    "status": "passed",
+    "test_file": "tests/studionet_smoke.py",
+    "transaction_hashes": {
+      "classify_mix": "0xda3eca89d94fabddd98066b70c8fe1a32497006679079454c0ab4e21ca32e014",
+      "deploy": "0x0dab1dfd944a243c240421c08d2aa1841496f3b8c144b6bac3ac8d16cfcb38ef",
+      "record_mix": "0x115f7fc74ae266af3d74baae85d4c7eec0884d4187d23800b3996353d1094649"
+    },
+    "workflow_id": "0x11cdfa59021240f5b2f31e425650765390ac3796:release_ff6fac35"
+  },
+  "network": {
+    "chain_id": 61999,
+    "name": "studionet",
+    "rpc": "https://studio.genlayer.com/api"
+  },
+  "repository": "energymixreceipt",
+  "schema": "genlayer-submission-evidence/v2",
+  "source_bytes_match": true,
+  "source_sha256": "b27df0b9514b5a20369728ae890073acd865a3cfa78235700df0c458b7b46015",
+  "wallet_addresses": {
+    "owner": "0x11CDfA59021240f5B2f31E425650765390Ac3796"
+  }
+}
