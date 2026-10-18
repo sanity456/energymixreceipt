@@ -4,6 +4,16 @@
   "deployed_abi_matches_local": true,
   "deployed_source_sha256": "b5ac7282e4eeb1d8292c12dd02a8e91b8d7acf7ac0a3166ac0e0c25ddfd7dbd6",
   "deployment_transaction_hash": "0x757bf339bfeb8f7c0645c5a7152102a64a8367296d913ab482323ca606719bff",
+  "explorer_links": {
+    "contract": "https://explorer-studio.genlayer.com/address/0xf405D47b70b839e3F369F9f7c196e98A219a22a8",
+    "transactions": {
+      "attest_mix": "https://explorer-studio.genlayer.com/tx/0xcbab90e21df9a634134114691670259c3e32d7406d36053c7f69d022dd6419a9",
+      "deploy": "https://explorer-studio.genlayer.com/tx/0x757bf339bfeb8f7c0645c5a7152102a64a8367296d913ab482323ca606719bff",
+      "record_mix": "https://explorer-studio.genlayer.com/tx/0xe7716dc4182cb4f2e5dcd6ec2208080c1b3d523ef1ae3c49b918e24ff9650ca3",
+      "retire": "https://explorer-studio.genlayer.com/tx/0x856a5ba4b3301241e29c18194aef484f5d423ad811046e8ea65cefdf39260d8c",
+      "reject_over_retirement": "https://explorer-studio.genlayer.com/tx/0x46086ce1179057ab559921a1c16642ef4bb25647640917b314569350d05e032a"
+    }
+  },
   "full_flow_test": {
     "completed_at_utc": "2026-10-12T12:49:39.972848+00:00",
     "final_state": "ISSUED_WITH_25_MWH_RETIRED",
@@ -18,14 +28,67 @@
     },
     "workflow_id": "0x7fcd006a39f0f3863054ee1a6cf6fe1e4dee16be:release_5855e88a"
   },
+  "negative_test_transactions": {
+    "reject_over_retirement": "0x46086ce1179057ab559921a1c16642ef4bb25647640917b314569350d05e032a"
+  },
+  "negative_tests": {
+    "over_retirement": {
+      "attempted_mwh": 46,
+      "available_before_attempt_mwh": 45,
+      "execution_result": "ERROR",
+      "mix_id": "0x7fcd006a39f0f3863054ee1a6cf6fe1e4dee16be:release_5855e88a",
+      "retired_after_attempt_mwh": 25,
+      "state_after": {
+        "alignment": "SUPPORTED",
+        "auditor": "0x94875ba0b39171f07d4509bcc91637787f6901ee",
+        "auditor_report": "For 2026-10 I independently attest 60 MWh from solar photovoltaic panels, 30 MWh from a natural gas turbine, and 10 MWh from wind turbines.",
+        "beneficiary": "0x2e18f80b81a675209309df243a141239227f5a28",
+        "categories": [
+          "SOLAR",
+          "FOSSIL",
+          "WIND"
+        ],
+        "owner": "0x7fcd006a39f0f3863054ee1a6cf6fe1e4dee16be",
+        "period": "2026-10",
+        "renewable_bps": 7000,
+        "renewable_mwh": 70,
+        "retired_mwh": 25,
+        "rows": [
+          {
+            "amount_mwh": 60,
+            "category": "SOLAR",
+            "description": "Solar photovoltaic panels"
+          },
+          {
+            "amount_mwh": 30,
+            "category": "FOSSIL",
+            "description": "Natural gas turbine"
+          },
+          {
+            "amount_mwh": 10,
+            "category": "WIND",
+            "description": "Wind turbines"
+          }
+        ],
+        "status": "ISSUED",
+        "total_mwh": 100
+      },
+      "state_unchanged": true,
+      "transaction_hash": "0x46086ce1179057ab559921a1c16642ef4bb25647640917b314569350d05e032a"
+    }
+  },
   "network": {
     "chain_id": 61999,
     "name": "studionet",
     "rpc": "https://studio.genlayer.com/api"
   },
   "repository": "energymixreceipt",
-  "schema": "genlayer-submission-evidence/v2",
+  "schema": "genlayer-submission-evidence/v3",
   "source_bytes_match": true,
+  "source_revision": {
+    "git_commit": "e888d7c254907dc353ea67fbf631eae00ff2aef1",
+    "path": "contracts/energy_mix_receipt.py"
+  },
   "source_sha256": "b5ac7282e4eeb1d8292c12dd02a8e91b8d7acf7ac0a3166ac0e0c25ddfd7dbd6",
   "wallet_addresses": {
     "auditor": "0x94875ba0b39171f07d4509Bcc91637787f6901Ee",

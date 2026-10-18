@@ -14,6 +14,6 @@ The model maps descriptions to a same-length category vector and decides whether
 
 ## Verification
 
-Run `genvm-lint check contracts/energy_mix_receipt.py`, `genvm-lint typecheck contracts/energy_mix_receipt.py --strict`, and `pytest -q`. `tests/studionet_smoke.py` exercises a full StudioNet flow with a new encrypted wallet outside this repository. `deployments/studionet.json` and `tests/studionet_release_proof.py` bind the source, ABI, deployment, and flow receipts.
+Use the GenVM v0.2.16 bundle that contains the contract's pinned runner. In PowerShell run `$env:PYTHONUTF8='1'; $env:GENVM_VERSION='v0.2.16'`, then run `genvm-lint check contracts/energy_mix_receipt.py`, `genvm-lint typecheck contracts/energy_mix_receipt.py --strict`, `pytest -q`, and `python tests/studionet_release_proof.py`. `tests/studionet_smoke.py` exercises the full StudioNet flow and a rejected over-retirement attempt, then reads the mix again to verify the failed call did not change retired MWh. `deployments/studionet.json` binds the deployment to the exact source commit and hash and records the ABI, transaction receipts, negative-test execution result, and readback. `tests/studionet_release_proof.py` rechecks the source, ABI, and evidence.
 
 Current StudioNet deployment: [0xf405D47b70b839e3F369F9f7c196e98A219a22a8](https://explorer-studio.genlayer.com/address/0xf405D47b70b839e3F369F9f7c196e98A219a22a8). The exact source hash and finalized receipts are in `deployments/studionet.json`. Do not submit the older address. See `AUDIT.md` for the review boundary and test results.
